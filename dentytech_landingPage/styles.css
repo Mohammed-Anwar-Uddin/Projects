@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+.nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.nav-part1 h2, .nav-part1 i{
+    padding: 5px 10px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    border-radius: 50px; 
+}
+.nav-part1 i{
+    font-size: 18px;
+}
+.nav-part3 button{
+    padding: 5px 10px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+}
+#btn2{
+    background-color: orangered;
+    color: white;
+}
+
+.nav-part2 h1{
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#main > h1{
+    font-size: 130px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+img{
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#img1{
+    transform: translate(-50%,-50%) rotate(-30deg);
+}
+
+#img2{
+    transform: translate(-50%,-50%) rotate(-20deg);
+}
+#img3{
+    transform: translate(-50%,-50%) rotate(-10deg);
+}
+
+.bottom{
+    position: absolute;
+    bottom: 2%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+
+.icon{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon i{
+    font-size: 20px;
+    margin-right: 5px;
+}
