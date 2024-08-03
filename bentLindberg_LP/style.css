@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+#nav h4 {
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin-right: 5px;
+}
+
+#intro {
+  height: 39%;
+  width: 100%;
+  font-family: gilroy;
+  padding: 0 20px;
+}
+
+#intro h1 {
+  font-size: 120px;
+  line-height: 100px;
+  font-weight: 400;
+}
+#place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#hero-image {
+  height: 75%;
+  width: 100%;
+  background: url(https://assets-global.website-files.com/64589fb989b2b33c593db89d/6458a6db645ec6a527000cfa_home-hero-p-2000.webp);
+  background-size: cover;
+}
+
+#about {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  
+}
+
+#about h2 {
+  font-size: 65px;
+  height: 100%;
+  width: 60%;
+  line-height: 60px;
+}
+
+#about-para2 {
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-left: 2px solid black;
+}
+
+#icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+#icons i {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+#work {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid black;
+  padding: 20px 10px;
+
+}
+
+#work1 {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 30%;
+  padding: 20px 30px;
+  margin-top: 50px;
+  font-size: 20px;
+  border-right: 1px solid black;
+}
+
+#work2 {
+  height: 100%;
+  width: 65%;
+  padding: 0  65px;
+}
+
+.work2-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 50px 0;
+}
+
+.work2-part:nth-child(1){
+    border-bottom: 1px solid black;
+}
+
+.work2-part .elem{
+    width: 50%;
+    height: 100%;
+    
+}
+
+.work2-part .elem:nth-child(1){
+    border-right: 2px solid black;
+    padding-right: 30px;
+}
+.work2-part .elem:nth-child(2){
+    padding-left: 60px;
+}
+
+
+.elem h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.elem p{
+    font-size: 20px;
+    color:gray;
+    font-weight: 300;
+}
