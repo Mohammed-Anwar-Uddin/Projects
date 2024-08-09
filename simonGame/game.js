@@ -1,7 +1,7 @@
 var buttonColors = ["red","blue","green","yellow"];
 var gamePattern = []
 var userClickedPattern = []
-
+var start = document.getElementById('start')
 var started = false;
 
 var level = 0;
@@ -14,7 +14,15 @@ if (!started){
     nextSequence();
     started = true;
     }
+})
 
+start.addEventListener('click',()=>{
+    if (!started){
+        $("#level-title").text("level: " + level);
+        nextSequence();
+        started = true;
+        start.style.display='none'
+        }
 })
 
 
@@ -61,6 +69,8 @@ function checkAnswer(currentLevel){
 
         $("h1").text("GAME OVER,Press Any key to Restart");
         startOver();
+        start.style.display='inline-block'
+
     }
 
     

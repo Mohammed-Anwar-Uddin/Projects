@@ -26,6 +26,15 @@ body {
   border-radius: 20%;
 }
 
+#start{
+  width: 100px;
+  height: 33px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c0d1c8;
+  font-family: 'Press Start 2P', cursive;
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;
