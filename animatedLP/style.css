@@ -1,0 +1,11 @@
+*::selection{
+    background-color: #ef9d71;
+}
+
+
+body[theme='black']{
+    background-color: #000;
+}
+body[theme='black'] .section{
+    color: #fff;
+}
