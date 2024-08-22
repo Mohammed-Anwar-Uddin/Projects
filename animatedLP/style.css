@@ -2,11 +2,35 @@
     background-color: #ef9d71;
 }
 
+body{
+    transition: background-color 0.5s ease-in;
+}
 
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
 
 body[theme='black']{
     background-color: #000;
 }
 body[theme='black'] .section{
     color: #fff;
+}
+body[theme='cyan']{
+    background-color: #80becc;
+}
+body[theme='cyan'] .section{
+    color: #2e6c7a;
+}
+body[theme='salmon']{
+    background-color: salmon;
+}
+body[theme='salmon'] .section{
+    color: rgb(124, 52, 44);
+}
+body[theme='white']{
+    background-color: #fff;
+}
+body[theme='white'] .section{
+    color: black;
 }
