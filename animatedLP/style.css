@@ -22,12 +22,7 @@ body[theme='cyan']{
 body[theme='cyan'] .section{
     color: #2e6c7a;
 }
-body[theme='salmon']{
-    background-color: salmon;
-}
-body[theme='salmon'] .section{
-    color: rgb(124, 52, 44);
-}
+
 body[theme='white']{
     background-color: #fff;
 }
