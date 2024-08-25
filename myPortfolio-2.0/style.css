@@ -305,7 +305,7 @@ nav i{
 
 .about-arrow{
   position: relative;
-  top: 17%;
+  top: 22%;
   right: 18px;
   font-size: 44px;
   color: #515151;
@@ -313,7 +313,7 @@ nav i{
 }
 @keyframes about-arrow {
   from{
-    right: 14px;
+    right: 18px;
   }
   to{
     right: 22px;
@@ -919,7 +919,7 @@ padding: 0 30px;
   padding: 0 30px;
 }
 #about-btn{
-  width: 80px;
+  width: 110px;
   font-size: 13px;
 }
 #resume-btn{
