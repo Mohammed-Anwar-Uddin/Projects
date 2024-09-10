@@ -151,6 +151,20 @@ background-color: black;
         gap: 10px;
         width: 100%;
         font-size: 19px;
-
+    }
+    #content h1{
+        font-size: 50px;
+        line-height: 1.4;
+    }
+    #projects{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .elem{
+        width: 100%;
+        height: fit-content;
+    }
+    .elem img{
+        width: 100%;
     }
 }
