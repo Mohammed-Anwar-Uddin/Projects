@@ -143,12 +143,15 @@ background-color: black;
         gap: 20px;
     }
     #nav-part1{
-        display: flex;
-        justify-content: space-around;
-        width: 80%;
+        display: none;
+        /* justify-content: space-around;
+        width: 80%; */
     }
     #nav-part2{
-        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
         width: 100%;
         font-size: 19px;
     }
