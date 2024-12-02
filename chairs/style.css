@@ -21,6 +21,11 @@ nav {
   padding: 10px;
 }
 
+.logo img{
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
 ul li {
   display: inline;
   list-style: none;
