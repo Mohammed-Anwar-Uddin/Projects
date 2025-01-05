@@ -26,16 +26,16 @@ useEffect(()=>{
       
         {query && <i onClick={() => setQuery("")} className='text-zinc-400 text-3xl ri-close-fill'></i>
       }
-        {query.length > 2 && <div className='absolute w-[50%] h-[50vh] bg-zinc-100 top-[90%] overflow-auto'>
+        {query.length > 2 && <div className='absolute w-[45%] h-[50vh] bg-zinc-100 top-[100%] left-[18vw] overflow-auto'>
             
             {
-              searchResult.length > 2 &&
+              searchResult.length ?
               searchResult.map((s,i)=>(
                 <Link key={i} className='flex justify-start items-center p-4 border border-b-zinc-600'>
-            <img className='w-[10vw] h-[10vh] object-cover rounded-lg mr-3 shadow-lg ' src={(!s.backdrop_path && !s.profile_path && noimage) || (`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`)  } alt="" />
-            <span>{s.original_title || s.name || s.title || s.original_name}</span>
-            </Link>
-              ))
+                <img className='w-[10vw] h-[10vh] object-contain rounded-lg mr-3 shadow-lg ' src={(!s.backdrop_path && !s.profile_path && noimage) || (`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`)  } alt="" />
+                 <span>{s.original_title || s.name || s.title || s.original_name}</span>
+                 </Link> 
+              )): <h1 className='text-center mt-2'>No Matching data found</h1>
             }
         </div>}
     </div>
