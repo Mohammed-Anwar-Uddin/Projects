@@ -21,12 +21,12 @@ useEffect(()=>{
   return (
     <div  className='flex w-full h-[10vh] relative pl-[15vw]  items-center'>
         <i className='text-zinc-400 text-3xl ri-search-line'></i>
-        <input onChange={(e)=> setQuery(e.target.value)} value={query} className='w-[50%] text-zinc-200 mx-5 p-5 text-xl outline-none border-none bg-transparent ' type="text" placeholder='Search anything...' />
+        <input onChange={(e)=> setQuery(e.target.value)} value={query} className='w-[40%] text-zinc-200 mx-5 p-5 text-xl outline-none border-none bg-transparent ' type="text" placeholder='Search anything...' />
 
       
         {query && <i onClick={() => setQuery("")} className='text-zinc-400 text-3xl ri-close-fill'></i>
       }
-        {query.length > 2 && <div className='absolute w-[45%] h-[50vh] bg-zinc-100 top-[100%] left-[18vw] overflow-auto'>
+        {query.length > 2 && <div className='absolute w-[37%] h-[50vh] bg-zinc-100 top-[100%] left-[18vw] overflow-auto'>
             
             {
               searchResult.length ?
