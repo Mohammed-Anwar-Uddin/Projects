@@ -3,8 +3,8 @@ import React from 'react'
 const Dropdown = ({title, options, func}) => {
   return (
     <div>
-        <select onClick={func} className='select' defaultValue={"0"} name="format" id="format">
-            <option value="0" disabled>{title}</option>
+        <select onChange={func} className='select' defaultValue={title} name="format" id="format">
+            <option defaultChecked disabled>{title}</option>
             {
                 options.map((o, i) => (
                <option key={i} value={o}>{o.toUpperCase()}</option>
@@ -16,4 +16,4 @@ const Dropdown = ({title, options, func}) => {
   )
 }
 
-export default Dropdown
+export default React.memo(Dropdown)
