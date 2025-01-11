@@ -1,5 +1,6 @@
 import React from 'react'
 import Dropdown from './Dropdown'
+import { Link } from 'react-router-dom'
 
 const HorizontalCards = ({trending}) => {
   return (
@@ -8,7 +9,7 @@ const HorizontalCards = ({trending}) => {
 
             {
                 trending && trending.map((d, i)=>(
-                    <div key={i} className='min-w-[17%] bg-zinc-900 mr-3 p-2'>
+                    <Link to={`/${d.media_type}/details/${d.id}`} key={i} className='min-w-[17%] bg-zinc-900 mr-3 p-2'>
                         <img className='w-full h-1/2 object-cover' src={`https://image.tmdb.org/t/p/original${d.backdrop_path || d.poster_path}`} alt="" />
                         <h1 className='text-[1vw] font-semibold text-white'>
                             {
@@ -21,7 +22,7 @@ const HorizontalCards = ({trending}) => {
                             }...
                             <span className='text-white'> more</span>
                         </p>
-                    </div>
+                    </Link>
                 ))
             }
         </div>
