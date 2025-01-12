@@ -12,7 +12,7 @@ import PersonDetails from './components/PersonDetails'
 
 const App = () => {
   return (
-    <div className='h-screen w-screen bg-[#1f1e24] flex'>
+    <div className='h-screen w-screen bg-[#1f1e24] flex overflow-x-hidden'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/trending' element={<Trending />} />

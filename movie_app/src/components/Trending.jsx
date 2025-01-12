@@ -46,8 +46,8 @@ useEffect(()=>{
 },[category, duration])
 
   return (
-    <div className=' w-screen h-fit'>
-        <div className='flex items-center px-5 '>
+    <div className=' w-full h-fit overflow-hidden'>
+        <div className='flex items-center '>
         <h1 className='text-[1.5vw] font-semibold text-zinc-400 w-[17%]'><i onClick={() => navigate(-1)} className=' hover:text[#6556cd] ri-arrow-left-line'></i>Trending <small className='text-zinc-600 text-sm'>({category})</small></h1>
 
 
