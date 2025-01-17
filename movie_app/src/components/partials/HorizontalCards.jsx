@@ -1,8 +1,8 @@
 import React from 'react'
-import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom'
 
 const HorizontalCards = ({trending}) => {
+    console.log(trending)
   return (
 
         <div className='w-[100%] flex overflow-y-hidden'>
@@ -18,7 +18,7 @@ const HorizontalCards = ({trending}) => {
                         </h1>
                         <p className='my-2 text-zinc-400 text-[0.8vw]'>
                             {
-                            d.overview.slice(0,70)
+                             d.overview && d.overview.slice(0,70)
                             }...
                             <span className='text-white'> more</span>
                         </p>
