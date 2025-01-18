@@ -18,6 +18,6 @@ export const counterSlice = createSlice({
     }
 })
 
-export const {loadmovie, removemovie} = counterSlice.reducer
+export const {loadmovie, removemovie} = counterSlice.actions
 
 export default counterSlice.reducer

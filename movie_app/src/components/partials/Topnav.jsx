@@ -31,7 +31,7 @@ useEffect(()=>{
             {
               searchResult.length ?
               searchResult.map((s,i)=>(
-                <Link key={i} className='flex justify-start items-center p-4 border border-b-zinc-600'>
+                <Link to={`/${s.media_type}/details/${s.id}`} key={i} className='flex justify-start items-center p-4 border border-b-zinc-600'>
                 <img className='w-[10vw] h-[10vh] object-contain rounded-lg mr-3 shadow-lg ' src={(!s.backdrop_path && !s.profile_path && noimage) || (`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`)  } alt="" />
                  <span>{s.original_title || s.name || s.title || s.original_name}</span>
                  </Link> 
