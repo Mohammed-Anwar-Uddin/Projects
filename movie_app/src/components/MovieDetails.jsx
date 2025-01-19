@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncloadmovie } from "../store/actions/movieActions";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { removemovie } from "../store/reducers/movieSlice";
 import Loading from "./Loading";
+import HorizontalCards from "./partials/HorizontalCards";
 
 const MovieDetails = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const MovieDetails = () => {
   console.log(info);
   return info ? (
     <div
-      className="w-screen h-screen px-[2vw]"
+      className="w-screen h-max px-[2vw]"
       style={{
          background: `
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
@@ -148,11 +149,10 @@ const MovieDetails = () => {
         )}
       </div>
 
-      <div className="">
+      
+      <HorizontalCards trending={info.recommendations.length > 0 ? info.recommendations : info.similar}  />
 
-      </div>
-
-
+<Outlet />
     </div>
   ) : (
     <Loading />
