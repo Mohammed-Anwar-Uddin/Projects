@@ -17,11 +17,10 @@ const MovieDetails = () => {
     return () => {
       dispatch(removemovie());
     };
-  }, []);
-  console.log(info);
+  }, [id]);
   return info ? (
     <div
-      className="w-screen h-max px-[2vw]"
+      className="w-screen h- min-h-screen px-[2vw] pb-[5vw]"
       style={{
          background: `
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
@@ -35,7 +34,7 @@ const MovieDetails = () => {
       <nav className="text-zinc-300 flex items-center h-[8vh] text-[2vw] gap-[5vw]">
         <Link
           onClick={() => navigate(-1)}
-          className="hover:text-[#6556cd] ri-arrow-left-line"
+          className="hover:text-[#6556cd] ri-arrow-left-line cursor-pointer"
         ></Link>
         <a href={info.detail.homepage} target="_blank">
           <i className="ri-external-link-fill"></i>
@@ -54,7 +53,7 @@ const MovieDetails = () => {
         </a>
       </nav>
 
-      <div className="w-full flex text-white">
+      <div className="w-full flex text-white py-[2vw]">
         <img
           className="shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] h-[40vh] object-cover"
           src={`https://image.tmdb.org/t/p/original/${
@@ -63,7 +62,7 @@ const MovieDetails = () => {
           alt=""
         />
 
-        <div>
+        <div className="ml-[3vw]">
           <h1 className="text-5xl font-black text-white">
           {
   info.detail.title || info.detail.name || info.detail.original_title || info.detail.original_name
@@ -108,12 +107,13 @@ const MovieDetails = () => {
       </div>
 
 
-      <div className="mt-5">
+      <div className="my-5">
         {info.watchproviders && info.watchproviders.flatrate && (
           <div className="flex gap-x-10 items-center text-white">
             <h1>Available on Platforms</h1>
-            {info.watchproviders.flatrate.map((w) => (
+            {info.watchproviders.flatrate.map((w,i) => (
               <img
+              key={i}
                 title={w.title}
                 className="w-[7vh] rounded-md"
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
@@ -125,8 +125,9 @@ const MovieDetails = () => {
         {info.watchproviders && info.watchproviders.rent && (
           <div className="flex gap-x-10 my-6 items-center text-white">
             <h1>Available for Rent</h1>
-            {info.watchproviders.rent.map((w) => (
+            {info.watchproviders.rent.map((w,i) => (
               <img
+              key={i}
                 title={w.title}
                 className="w-[7vh] rounded-md"
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
@@ -138,8 +139,9 @@ const MovieDetails = () => {
         {info.watchproviders && info.watchproviders.buy && (
           <div className="flex gap-x-10 items-center text-white">
             <h1>Available to Buy</h1>
-            {info.watchproviders.buy.map((w) => (
+            {info.watchproviders.buy.map((w,i) => (
               <img
+              key={i}
                 title={w.title}
                 className="w-[7vh] rounded-md"
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}

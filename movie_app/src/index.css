@@ -7,19 +7,31 @@
 /* primary color #1f1e24 */
 /* secondary color #6556cd */
 
+#root{
+    overflow-x: hidden !important;
+}
 
+.infinite-scroll-component{
+    overflow-x: hidden !important;
+}
+
+.infinite-scroll-component__outerdiv{
+    overflow-x: hidden !important;
+
+}
 ::-webkit-scrollbar{
     width: 7px;
     height: 7px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #181819;
+    background-color: #666;
     border-radius: 10px;
     transition: hover 0.5s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover{
+    cursor: pointer;
     background-color: #6556cd;
     border-radius: 10px;
 

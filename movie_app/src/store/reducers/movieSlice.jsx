@@ -12,8 +12,8 @@ export const counterSlice = createSlice({
         loadmovie:(state,action) =>{
             state.info = action.payload
         },
-        removemovie:(state, action) =>{
-            state.info = action.payload
+        removemovie:(state) =>{
+            state.info = null
         }
     }
 })

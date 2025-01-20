@@ -19,28 +19,21 @@ const People = () => {
       const { data } = await axios(`/person/${category}?page=${page}`);
       if (data.results.length) {
         setPeople((prevState) => [...prevState, ...data.results]);
-        console.log(data.results);
         setPage(page + 1);
       } else {
         setHasmore(false);
       }
-      console.log(people);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleRefresh = () => {
-    if (people.length === 0) {
-      getPeopleCards();
-    } else {
-      setPage(1);
-      setPeople([]);
-      getPeopleCards();
-    }
-  };
+
   useEffect(() => {
-    handleRefresh();
+    setPage(1);
+      setPeople([]);
+      setHasmore(true)
+      getPeopleCards();
   }, [category]);
   return (
     <div className=" w-screen h-fit">
@@ -48,7 +41,7 @@ const People = () => {
         <h1 className="text-[1.5vw] font-semibold text-zinc-400 w-[17%]">
           <i
             onClick={() => navigate(-1)}
-            className=" hover:text[#6556cd] ri-arrow-left-line"
+            className=" hover:text[#6556cd] ri-arrow-left-line cursor-pointer"
           ></i>{" "}
           People
         </h1>

@@ -13,7 +13,7 @@ import Trailer from "./components/partials/Trailer";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen bg-[#1f1e24] flex overflow-x-hidden">
+    <div className="w-screen bg-[#1f1e24] flex">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />
@@ -23,7 +23,10 @@ const App = () => {
           <Route path="/movie/details/:id/trailer" element={<Trailer />} />
         </Route>
         <Route path="/tv" element={<Tv />} />
-        <Route path="/tv/details/:id" element={<TvDetails />} />
+        <Route path="/tv/details/:id" element={<TvDetails />} >
+        <Route path="/tv/details/:id/trailer" element={<Trailer />} />
+        
+        </Route>
         <Route path="/person" element={<People />} />
         <Route path="/person/details/:id" element={<PersonDetails />} />
       </Routes>
