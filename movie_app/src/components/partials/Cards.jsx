@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import Loading from '../Loading'
 
 const Cards = ({data, title}) => {
+  console.log(data)
   return data.length > 0 ?  
       <div className='flex flex-wrap items-center justify-center w-full overflow-x-hidden gap-[5%] h-fit bg-[#1f1e24]'>
     {
-      data.map((card, i) => <Link to={`/${card.release_date === "movie" ? "movie" : card.release_date === "tv" ? "tv" : title || title }/details/${card.id}`} key={i} className='relative w-[30vh] h-[65vh]'>
+      data.map((card, i) => <Link to={`/${card.release_date ? "movie" : card.gender ? "person" : "tv" }/details/${card.id}`} key={i} className='relative w-[30vh] h-[65vh]'>
         <img className='shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] h-[55vh] object-cover' src={`https://image.tmdb.org/t/p/original/${card.poster_path || card.backdrop_path || card.profile_path}`} alt="" />
 
 <h1 className='text-[1.2vw] text-zinc-400 mt-2 font-semibold'>
